@@ -2,7 +2,7 @@ import axios, {type AxiosError} from "axios";
 import {refreshTokens} from "./auth.ts";
 
 const api = axios.create({
-    baseURL: "http://smart-blog-be-fzj8.vercel.app/api/v1"
+    baseURL: "https://smart-blog-be-fzj8.vercel.app/api/v1"
 })
 
 const PUBLIC_ENDPOINTS = ["/auth/login", "/auth/register", "/auth/refresh"]
