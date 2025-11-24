@@ -1,8 +1,16 @@
 import {useEffect, useState} from "react";
-import {getAllPost} from "../services/post.ts";
+import {getAllPost} from "../services/post";
+
+interface Post {
+    _id: string;
+    title: string;
+    content: string;
+    tags: string[];
+    imageUrl: string;
+}
 
 export default function Post() {
-    const [post, setPost] = useState([])
+    const [post, setPost] = useState<Post[]>([])
     const [page, setPage] = useState(1)
     const [totalPage, setTotalPage] = useState("")
 
